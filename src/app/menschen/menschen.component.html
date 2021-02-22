@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-9">
+      <h2>Die Menschen im Netzwerk Engagement Natur</h2>
+      <p>Es gibt Menschen, die sich nicht nur in einem Verein oder in einem Bereich engagieren. In loser Reihenfolge stellen wir hier Freiwillige vor, die sich vielfältig ehrenamtlich betätigen und für eine Vernetzung im Naturbereich eintreten.</p>
+    </div>
+    <div class="col-md-3">
+      <img src="/assets/pic/Logo_Engagement_Natur.jpg" class="w-75">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col col-md-4 col-sm-6" *ngFor="let person of personen">
+      <div class="card">
+        <img class="card-img-top" [src]="person.foto" alt="Foto von {{person.name}}">
+        <div class="card-body">
+          <h5 class="card-title" style="height: 7rem">{{person.name}}</h5>
+          <p class="card-text">Jahrgang: {{person.jahrgang}}</p>
+          <p class="card-text">wohnt in {{person.wohnort}}</p>
+          <a routerLink="{{person.id}}" class="btn btn-success">Mehr Informationen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>

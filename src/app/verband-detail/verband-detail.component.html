@@ -1,0 +1,33 @@
+<br>
+<div class="container">
+  <div class="jumbotron">
+    <h2 class="display-4">{{verband.name}}</h2>
+    <br>
+    <img class="img-fluid" [src]="verband.pic" alt="Logo von {{verband.name}}">
+    <br>
+    <br>
+    <p class="lead">{{verband.description}}</p>
+    <br>
+    <h5>Hauptbetätigungsfelder:</h5>
+    <ul class="lead">
+      <li *ngFor="let t of verband.taetigkeit; index as i; first as isFirst">
+        {{t}} <span *ngIf="isFirst"></span>
+      </li>
+    </ul>
+    <br>
+    <h5>Veranstaltungen:</h5>
+    <p class="lead">Derzeit finden coronabedingt leider keine Veranstaltungen statt</p>
+    <br>
+    <h5>Kontakt:</h5>
+    <p class="lead">{{kontakt.name}}</p>
+    <p class="lead">{{kontakt.anPartner}}</p>
+    <p class="lead">{{kontakt.adresse}}</p>
+    <p class="lead">Tel: <a href="tel:{{kontakt.tel}}">{{kontakt.tel}}</a></p>
+    <p class="lead">E-Mail: <a href="mailto:{{kontakt.eMail}}">{{kontakt.eMail}}</a></p>
+    <p class="lead">Homepage: <a href="https://{{kontakt.homepage}}" target="_blank">{{kontakt.homepage}}</a></p>
+    <p class="lead">Facebook: <a href="https://{{kontakt.facebook}}" target="_blank">{{kontakt.facebook}}</a></p>
+    <p class="lead">Instagram: <a href="https://{{kontakt.instagram}}" target="_blank">{{kontakt.instagram}}</a>
+    <br>
+    <br>
+  </div>
+</div>

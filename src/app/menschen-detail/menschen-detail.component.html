@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+  <div class="jumbotron">
+    <h3 class="display-4">{{person.name}}</h3>
+    <br>
+    <img class="img-fluid" [src]="person.foto" alt="Foto von {{person.name}}">
+    <br>
+    <p class="lead">wohnt in {{person.wohnort}}</p>
+    <p class="lead">Jahrgang: {{person.jahrgang}}</p>
+    <br>
+    <p class="lead"><strong>Ich engagiere mich für und bei:</strong></p>
+    <p class="lead">{{person.engagement4}}</p>
+    <p class="lead">{{person.engagement1}}</p>
+    <p class="lead">{{person.engagement5}}</p>
+    <ul class="lead">
+      <li *ngFor="let p of person.engagement2; index as i; first as isFirst">
+        {{p}} <span *ngIf="isFirst"></span>
+      </li>
+    </ul>
+    <p class="lead">{{person.engagement3}}</p>
+    <br>
+    <p class="lead"><strong>Dazu gekommen bin ich durch:</strong></p>
+    <p class="lead">{{person.gekommen3}}</p>
+    <ul class="lead">
+      <li *ngFor="let p of person.gekommen1; index as i; first as isFirst">
+        {{p}} <span *ngIf="isFirst"></span>
+      </li>
+    </ul>
+    <p class="lead">{{person.gekommen2}}</p>
+    <br>
+    <p class="lead"><strong>Meine Verknüpfungspunkte und -Menschen hier im Netzwerk Engagement Natur:</strong></p>
+    <ul class="lead">
+      <li *ngFor="let p of person.verPunkte1; index as i; first as isFirst">
+        {{p}} <span *ngIf="isFirst"></span>
+      </li>
+    </ul>
+    <p class="lead">{{person.verPunkte2}}</p>
+    <br>
+    <p class="lead"><strong>Ehrenamtliche Tätigkeit bedeutet für mich:</strong></p>
+    <ul class="lead">
+      <li *ngFor="let p of person.taetigkeit1; index as i; first as isFirst">
+        {{p}} <span *ngIf="isFirst"></span>
+      </li>
+    </ul>
+    <p class="lead">{{person.taetigkeit2}}</p>
+    <br>
+  </div>
+</div>
+<br>
